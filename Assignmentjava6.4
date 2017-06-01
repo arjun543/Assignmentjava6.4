@@ -1,0 +1,22 @@
+package com;
+
+public class BinarySearch {
+
+	public void search(int[] numbers,int key,int start,int end)
+	{ int mid;
+		 mid=(start+end)/2;
+		 if(numbers[mid]==key)
+		 {
+			 System.out.println("number found at"+ (mid+1));
+		 return;
+		 }
+		 if(numbers[mid]<key)
+		 {
+			 search(numbers,key,mid+1,end);
+		 }
+		 else  if(numbers[mid]>key)
+		 {
+			 search(numbers,key,start,mid-1);
+		 }
+	}
+}
